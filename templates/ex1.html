@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <style>
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+a:link{text-decoration:none}
+.vn-blue a{
+background-color:#2980b9;
+  display:inline-block;
+  position:relative;
+  margin:160px 175px 160px 160px;
+  border: 2px solid #2980b9;
+  border-radius: 12px;
+  padding:50px 75px 50px 125px;
+  color:#fff;
+  transition:all 0.4s ease
+}
+
+.vn-blue a:before{
+  content:"\f019";
+  font-family:fontAwesome;
+  position:absolute;
+  font-style: "Times New Roman";
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size:28px;
+  border-radius:0 20px 0 0;
+  color:#000;
+  background-color:#fff;
+  opacity:0.3;
+  padding:50px 30px 40px 50px;
+  top:0;
+  left:0
+}
+
+.vn-blue a:hover{
+  background:#2c3e50
+}
+body {
+  font-family: sans-serif;
+  background-image:url("{{url_for('static',filename='bg.jpg')}}");
+  background-repeat:no-repeat;
+}
+
+h1{
+background-color:rgb(224, 213, 222);
+color:brown;
+text-align:center;
+padding:20px;
+font-family:coperlate;
+}
+
+      </style>
+<h1>Skin Disease Classification</h1>
+
+      <body>
+        
+            <div class="vn-blue" style="text-align: center;">
+                {% for file in files %}
+ 
+            <a href="{{'.' + '/' + url + '/' + file}}" class="btn-wrap">Download Report</a>
+            {% endfor %}
+            </div>
+        
+      </body>
+</html>
